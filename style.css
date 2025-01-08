@@ -1,0 +1,269 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: url(img/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%; /* позволяет контейнеру адаптироваться под экран */
+}
+
+.logotype {
+    font-family: "Bruno Ace SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    margin-left: 219px;
+    margin-top: 32px;
+}
+
+.logotype span {
+    color: #FAFF00;
+}
+
+
+
+
+.nav-list {
+    position: relative;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 300px;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    color: #ff6f61; /* Изменение цвета ссылки при наведении */
+}
+
+/* Бургер-меню */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.3s ease;
+}
+
+/* Эффект при активации бургер-меню (когда меню открыто) */
+.burger-menu.active span:nth-child(1) {
+    transform: rotate(45deg);
+    transform-origin: 0% 0%;
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    transform-origin: 0% 100%;
+}
+
+
+
+
+
+/* Для экранов от 320px до 479px */
+@media (min-width: 320px) and (max-width: 479px) {
+    .logotype {
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+
+    .nav-list {
+        display: none; /* Скрыть обычное меню на мобильных */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        padding: 20px;
+        margin: 0;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        transform: translateY(-20px); /* Начальное смещение меню */
+    }
+
+    .nav-list.active {
+        display: flex; /* Показать меню, если бургер кликнут */
+        opacity: 1;
+        transform: translateY(0); /* Меню выезжает */
+    }
+
+    /* Показать бургер-меню на мобильных */
+    .burger-menu {
+        display: flex;
+        margin-left: 290px;
+        margin-top: -55px;
+    }
+
+    /* Показать кнопку "крестик" при открытом меню */
+    .close-menu {
+        display: block;
+    }
+
+    .head-txt {
+        font-size: 12px;
+        margin-left: 30px;
+    }
+}
+
+
+
+
+/* Для экранов от 480px до 767px */
+@media (min-width: 480px) and (max-width: 767px) {
+    .logotype {
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+
+    .nav-list {
+        margin-left: 180px;
+        margin-top: -47.50px;
+    }
+
+    .nav-list li a {
+        font-size: 15px;
+    }
+
+    .head-txt {
+        font-size: 20px;
+        margin-left: 90px;
+        margin-top: 40px;
+    }
+}
+
+
+
+
+/* Для экранов от 768px до 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .logotype {
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+
+    .nav-list {
+        margin-left: 250px;
+        margin-top: -47.50px;
+    }
+    
+    .head-txt {
+        font-size: 30px;
+        margin-left: 90px;
+        margin-top: 120px;
+    }
+}
+
+
+
+/* Для экранов от 992px до 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .logotype {
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+
+    .nav-list {
+        margin-left: 350px;
+        margin-top: -47.50px;
+    }
+
+    .head-txt {
+        font-size: 40px;
+        margin-left: 90px;
+        margin-top: 160px;
+    }
+}
+
+
+
+
+
+/* Для экранов от 1200px и больше */
+@media (min-width: 1200px) and (max-width: 2559px) {
+    .logotype {
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+
+    .nav-list {
+        margin-left: 450px;
+        margin-top: -47.50px;
+    }
+
+    .nav-list li {
+        margin-right: 100px;
+    }
+
+    .head-txt {
+        font-size: 60px;
+        margin-left: 90px;
+        margin-top: 180px;
+    }
+}
+
+
+
+/* Для экранов шириной от 2560px до 3839px */
+@media (min-width: 2560px) and (max-width: 3839px) {
+    .logotype {
+        margin-left: 50px;
+        margin-top: 30px;
+        font-size: 50px;
+    }
+
+    .nav-list {
+        margin-left: 800px;
+        margin-top: -90px;
+        
+    }
+
+    .nav-list li {
+        margin-right: 130px;
+    }
+
+    .nav-list li a {
+        font-size: 30px;
+    }
+
+    .head-txt {
+        font-size: 100px;
+        margin-left: 250px;
+        margin-top: 350px;
+    }
+}
