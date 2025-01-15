@@ -1,0 +1,1301 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: url(img/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    background-color: #000;
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+}
+
+.logotype {
+    font-family: "Bruno Ace SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    margin-left: 219px;
+    margin-top: 32px;
+}
+
+.logotype span {
+    color: #FAFF00;
+}
+
+
+
+
+.nav-list {
+    position: relative;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 300px;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    color: #ff6f61;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.3s ease;
+}
+
+.burger-menu.active span:nth-child(1) {
+    transform: rotate(45deg);
+    transform-origin: 0% 0%;
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    transform-origin: 0% 100%;
+}
+
+
+
+
+
+.button {
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.button:hover {
+    box-shadow: .5px .5px 150px #252525;
+}
+
+.type1::after {
+    content: "Отличный выбор";
+    height: 50px;
+    width: 150px;
+    background-color: #008080;
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.type1::before {
+    content: "Записаться";
+    height: 50px;
+    width: 150px;
+    background-color: #fff;
+    color: #008080;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.type1:hover::after {
+    transform: translateY(0) scale(1.2);
+}
+
+.type1:hover::before {
+    transform: translateY(-50px) scale(0) rotate(120deg);
+}
+
+.reanons {
+    position: absolute;
+    width: 100%;
+}
+
+.reanon {
+    margin-left: -70px;
+}
+
+.reanons-to-join {
+    position: relative;
+    font-weight: bold;
+    font-size: 46px;
+    margin-top: 700px;
+    text-align: center;
+}
+
+.reanons-icon-one {
+    margin-left: 500px;
+    margin-top: 80px;
+}
+
+.sqm {
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 580px;
+    margin-top: -60px;
+}
+
+.sqm span {
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.reanons-icon-two {
+    position: absolute;
+    margin-left: 1100px;
+    margin-top: -95px;
+}
+
+.fitness-zone {
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 1200px;
+    margin-top: -95px;
+}
+
+.fitness-zone span {
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.reanons-icon-three {
+    margin-left: 485px;
+    margin-top: 80px;
+}
+
+.eqipment {
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 585px;
+    margin-top: -85px;
+
+}
+
+.eqipment span {
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.time-icon-four {
+    position: absolute;
+    margin-left: 1100px;
+    margin-top: -120px;
+}
+
+.time {
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 1200px;
+    margin-top: -120px;
+
+}
+
+.time span {
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+
+
+
+
+
+
+.subscription {
+    position: absolute;
+    width: 100%;
+}
+
+.subscription-text {
+    font-size: 48px;
+    font-weight: bold;
+    font-family: "Bruno Ace SC", serif;
+    margin-top: 1500px;
+    text-align: center;
+}
+
+
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: absolute;
+    justify-content: center;
+    margin-left: 330px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #222222;
+    border-radius: 10px;
+    width: 275px;
+    height: 397px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.card .price {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.card ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card ul li img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.buy-btn {
+    background-color: #ffcc00;
+    color: #000;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+}
+
+.buy-btn:hover {
+    background-color: #ffd633;
+}
+
+
+.reanons {
+    position: absolute;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Для экранов от 320px до 479px */
+@media (min-width: 320px) and (max-width: 479px) {
+    .logotype {
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        padding: 20px;
+        margin: 0;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        transform: translateY(-20px);
+    }
+
+    .nav-list.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .burger-menu {
+        display: flex;
+        margin-left: 290px;
+        margin-top: -55px;
+    }
+
+    .close-menu {
+        display: block;
+    }
+
+    .head-txt {
+        font-size: 12px;
+        margin-left: 30px;
+    }
+
+    .button {
+        height: 20px;
+        width: 70px;
+        font-size: 8px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        margin-left: 30px;
+    }
+    
+    .subscription {
+        margin-top: -200px;
+    }
+    .button:hover {
+        box-shadow: 0.3px 0.3px 30px #252525;
+    }
+
+    .type1::after {
+        content: "Отличный выбор";
+        height: 20px;
+        width: 70px;
+        background-color: #008031;
+        color: #fff;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        transform: translateY(20px);
+        font-size: 0.4rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .type1::before {
+        content: "Записаться";
+        height: 20px;
+        width: 70px;
+        background-color: #fff;
+        color: #008080;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        transform: translateY(0px) scale(1.2);
+        font-size: 0.6rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .type1:hover::after {
+        transform: translateY(0) scale(1.2);
+    }
+
+    .type1:hover::before {
+        transform: translateY(-20px) scale(0) rotate(120deg);
+    }
+
+    .reanons {
+        position: absolute;
+        width: 100%;
+    }
+
+    .reanon {
+        margin-left: 0px;
+    }
+
+    .reanons-to-join {
+        position: relative;
+        font-weight: bold;
+        font-size: 22px;
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    .reanons-icon-one {
+        margin-left: 37px;
+    }
+
+    .sqm {
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 117px;
+        margin-top: -63px;
+    }
+
+    .sqm span {
+        font-size: 14px;
+        font-weight: lighter;
+    }
+
+    .reanons-icon-two {
+        margin-left: 28px;
+        margin-top: 20.25px;
+    }
+
+    .fitness-zone {
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 117px;
+        margin-top: 10px;
+    }
+
+    .fitness-zone span {
+        font-size: 14px;
+        font-weight: lighter;
+    }
+
+    .reanons-icon-three {
+        margin-left: 25px;
+        margin-top: 20.25px;
+    }
+
+    .eqipment {
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 117px;
+        margin-top: -90px;
+    }
+
+    .eqipment span {
+        font-size: 14px;
+        font-weight: lighter;
+    }
+
+    .time-icon-four {
+        margin-left: 28px;
+        margin-top: 20.25px;
+    }
+
+    .time {
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 117px;
+        margin-top: 0px;
+    }
+
+    .time span {
+        font-size: 14px;
+        font-weight: lighter;
+    }
+
+    .card-container {
+        margin-left: 0;
+    }
+
+
+
+.about-photo {
+    width: 100px;
+    height: 100px;
+}
+}
+
+
+
+
+
+
+
+
+
+/* Для экранов от 480px до 767px */
+@media (min-width: 480px) and (max-width: 767px) {
+    .logotype {
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+
+    .nav-list {
+        margin-left: 180px;
+        margin-top: -47.50px;
+    }
+
+    .nav-list li a {
+        font-size: 15px;
+    }
+
+    .head-txt {
+        font-size: 20px;
+        margin-left: 50px;
+        margin-top: 40px;
+    }
+
+    .button {
+        height: 30px;
+        width: 100px;
+        font-size: 10px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        margin-left: 50px;
+    }
+
+    .button:hover {
+        box-shadow: 0.5px 0.5px 30px #252525;
+    }
+
+    .type1::after {
+        content: "Отличный выбор";
+        height: 30px;
+        width: 100px;
+        background-color: #008080;
+        color: #fff;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        transform: translateY(30px);
+        font-size: 0.80rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .type1::before {
+        content: "Записаться";
+        height: 30px;
+        width: 100px;
+        background-color: #fff;
+        color: #008080;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        transform: translateY(0px) scale(1.2);
+        font-size: 0.8rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .type1:hover::after {
+        transform: translateY(0) scale(1.2);
+    }
+
+    .type1:hover::before {
+        transform: translateY(-30px) scale(0) rotate(120deg);
+    }
+
+    .reanons {
+        position: absolute;
+        width: 100%;
+    }
+
+    .reanons-to-join {
+        position: relative;
+        font-weight: bold;
+        font-size: 30px;
+        margin-top: 330px;
+        text-align: center;
+    }
+
+
+
+
+
+    .reanons-icon-one {
+        margin-left: 37px;
+    }
+
+    .sqm {
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 117px;
+        margin-top: -63px;
+    }
+
+    .sqm span {
+        font-size: 14px;
+        font-weight: lighter;
+    }
+
+    .reanons-icon-two {
+        margin-left: 28px;
+        margin-top: 10.25px;
+    }
+
+    .fitness-zone {
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 117px;
+        margin-top: 0px;
+    }
+
+    .fitness-zone span {
+        font-size: 14px;
+        font-weight: lighter;
+    }
+
+    .reanons-icon-three {
+        margin-left: 25px;
+        margin-top: 20.25px;
+    }
+
+    .eqipment {
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 117px;
+        margin-top: -90px;
+    }
+
+    .eqipment span {
+        font-size: 14px;
+        font-weight: lighter;
+    }
+
+    .time-icon-four {
+        margin-left: 28px;
+        margin-top: 4px;
+    }
+
+    .time {
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 117px;
+        margin-top: 10px;
+    }
+
+    .time span {
+        font-size: 14px;
+        font-weight: lighter;
+    }
+}
+
+
+
+
+/* Для экранов от 768px до 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .logotype {
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+
+    .nav-list {
+        margin-left: 250px;
+        margin-top: -47.50px;
+    }
+
+    .head-txt {
+        font-size: 30px;
+        margin-left: 90px;
+        margin-top: 120px;
+    }
+
+    .button {
+        height: 50px;
+        width: 130px;
+        font-size: 12px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        margin-left: 90px;
+    }
+
+    .button:hover {
+        box-shadow: 0.5px 0.5px 50px #252525;
+    }
+
+    .type1::after {
+        content: "Отличный выбор";
+        height: 50px;
+        width: 130px;
+        background-color: #008080;
+        color: #fff;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        transform: translateY(50px);
+        font-size: 0.8rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .type1::before {
+        content: "Записаться";
+        height: 50px;
+        width: 130px;
+        background-color: #fff;
+        color: #008080;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        transform: translateY(0px) scale(1.2);
+        font-size: 1rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .type1:hover::after {
+        transform: translateY(0) scale(1.2);
+    }
+
+    .type1:hover::before {
+        transform: translateY(-50px) scale(0) rotate(120deg);
+    }
+
+    .reanons {
+        position: absolute;
+        width: 100%;
+    }
+
+    .reanon {
+        margin-left: 170px;
+    }
+
+    .reanons-to-join {
+        position: relative;
+        font-weight: bold;
+        font-size: 30px;
+        margin-top: 320px;
+        text-align: center;
+    }
+
+    .reanons-icon-one {
+        margin-left: 37px;
+    }
+
+    .sqm {
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 117px;
+        margin-top: -63px;
+    }
+
+    .sqm span {
+        font-size: 14px;
+        font-weight: lighter;
+    }
+
+    .reanons-icon-two {
+        margin-left: 28px;
+        margin-top: 10.25px;
+    }
+
+    .fitness-zone {
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 117px;
+        margin-top: 0px;
+    }
+
+    .fitness-zone span {
+        font-size: 14px;
+        font-weight: lighter;
+    }
+
+    .reanons-icon-three {
+        margin-left: 25px;
+        margin-top: 20.25px;
+    }
+
+    .eqipment {
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 117px;
+        margin-top: -90px;
+    }
+
+    .eqipment span {
+        font-size: 14px;
+        font-weight: lighter;
+    }
+
+    .time-icon-four {
+        margin-left: 28px;
+        margin-top: 4px;
+    }
+
+    .time {
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 117px;
+        margin-top: 10px;
+    }
+
+    .time span {
+        font-size: 14px;
+        font-weight: lighter;
+    }
+
+    .card-container {
+        margin-left: 0px;
+    }
+}
+
+
+
+/* Для экранов от 992px до 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .logotype {
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+
+    .nav-list {
+        margin-left: 350px;
+        margin-top: -47.50px;
+    }
+
+    .head-txt {
+        font-size: 40px;
+        margin-left: 90px;
+        margin-top: 160px;
+    }
+
+    .button {
+        height: 50px;
+        width: 130px;
+        font-size: 12px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        margin-left: 90px;
+    }
+
+    .button:hover {
+        box-shadow: 0.5px 0.5px 50px #252525;
+    }
+
+    .type1::after {
+        content: "Отличный выбор";
+        height: 50px;
+        width: 130px;
+        background-color: #008080;
+        color: #fff;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        transform: translateY(50px);
+        font-size: 0.8rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .type1::before {
+        content: "Записаться";
+        height: 50px;
+        width: 130px;
+        background-color: #fff;
+        color: #008080;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        transform: translateY(0px) scale(1.2);
+        font-size: 1rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .type1:hover::after {
+        transform: translateY(0) scale(1.2);
+    }
+
+    .type1:hover::before {
+        transform: translateY(-50px) scale(0) rotate(120deg);
+    }
+
+    .reanons {
+        position: absolute;
+        width: 100%;
+    }
+
+    .reanon {
+        margin-left: 260px;
+    }
+
+    .reanons-to-join {
+        position: relative;
+        font-weight: bold;
+        font-size: 46px;
+        margin-top: 320px;
+        text-align: center;
+    }
+
+    .reanons-icon-one {
+        margin-left: 37px;
+    }
+
+    .sqm {
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 117px;
+        margin-top: -63px;
+    }
+
+    .sqm span {
+        font-size: 14px;
+        font-weight: lighter;
+    }
+
+    .reanons-icon-two {
+        margin-left: 28px;
+        margin-top: 10.25px;
+    }
+
+    .fitness-zone {
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 117px;
+        margin-top: 0px;
+    }
+
+    .fitness-zone span {
+        font-size: 14px;
+        font-weight: lighter;
+    }
+
+    .reanons-icon-three {
+        margin-left: 25px;
+        margin-top: 20.25px;
+    }
+
+    .eqipment {
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 117px;
+        margin-top: -90px;
+    }
+
+    .eqipment span {
+        font-size: 14px;
+        font-weight: lighter;
+    }
+
+    .time-icon-four {
+        margin-left: 28px;
+        margin-top: 4px;
+    }
+
+    .time {
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 117px;
+        margin-top: 10px;
+    }
+
+    .time span {
+        font-size: 14px;
+        font-weight: lighter;
+    }
+
+    .card-container {
+        margin-left: 0px;
+    }
+}
+
+
+
+
+/* Для экранов от 1200px и больше */
+@media (min-width: 1200px) and (max-width: 2559px) {
+    .logotype {
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+
+    .nav-list {
+        margin-left: 450px;
+        margin-top: -47.50px;
+    }
+
+    .nav-list li {
+        margin-right: 100px;
+    }
+
+    .head-txt {
+        font-size: 60px;
+        margin-left: 90px;
+        margin-top: 180px;
+    }
+
+    .button {
+        height: 50px;
+        width: 130px;
+        font-size: 12px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        margin-left: 90px;
+    }
+
+    .button:hover {
+        box-shadow: 0.5px 0.5px 50px #252525;
+    }
+
+    .type1::after {
+        content: "Отличный выбор";
+        height: 50px;
+        width: 130px;
+        background-color: #008080;
+        color: #fff;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        transform: translateY(50px);
+        font-size: 0.8rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .type1::before {
+        content: "Записаться";
+        height: 50px;
+        width: 130px;
+        background-color: #fff;
+        color: #008080;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        transform: translateY(0px) scale(1.2);
+        font-size: 1rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .type1:hover::after {
+        transform: translateY(0) scale(1.2);
+    }
+
+    .type1:hover::before {
+        transform: translateY(-50px) scale(0) rotate(120deg);
+    }
+
+
+
+}
+
+
+
+
+
+/* Для экранов шириной от 2560px до 3839px */
+@media (min-width: 2560px) and (max-width: 3839px) {
+    .logotype {
+        margin-left: 50px;
+        margin-top: 30px;
+        font-size: 50px;
+    }
+
+    .nav-list {
+        margin-left: 800px;
+        margin-top: -90px;
+
+    }
+
+    .nav-list li {
+        margin-right: 130px;
+    }
+
+    .nav-list li a {
+        font-size: 30px;
+    }
+
+    .head-txt {
+        font-size: 100px;
+        margin-left: 250px;
+        margin-top: 350px;
+    }
+
+    .button {
+        height: 70px;
+        width: 300px;
+        font-size: 16px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        margin-left: 250px;
+    }
+
+    .button:hover {
+        box-shadow: 0.5px 0.5px 70px #252525;
+    }
+
+    .type1::after {
+        content: "Отличный выбор";
+        height: 70px;
+        width: 300px;
+        background-color: #008080;
+        color: #fff;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        transform: translateY(70px);
+        font-size: 1.5rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .type1::before {
+        content: "Записаться";
+        height: 70px;
+        width: 300px;
+        background-color: #fff;
+        color: #008080;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        transform: translateY(0px) scale(1.2);
+        font-size: 1.5rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .type1:hover::after {
+        transform: translateY(0) scale(1.2);
+    }
+
+    .type1:hover::before {
+        transform: translateY(-70px) scale(0) rotate(120deg);
+    }
+
+    .reanons {
+        position: absolute;
+        width: 100%;
+    }
+
+    .reanons-to-join {
+        position: relative;
+        font-weight: bold;
+        font-size: 80px;
+        margin-top: 680px;
+        text-align: center;
+    }
+
+    .reanon {
+        margin-left: 250px;
+    }
+
+    .card-container {
+        margin-left: 700px;
+    }
+}

@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('img/background.png');
+    z-index: -1; 
+}
+
+.content {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+/* Заголовок */
+.content h1 {
+    font-size: 3em;
+}
+
+/* Параграф */
+.content p {
+    font-size: 1.2em;
+}
+
+/* Медиа-запросы для адаптивности */
+
+/* Для мобильных устройств (до 768px) */
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 2em;
+    }
+
+    .content p {
+        font-size: 1em;
+        padding: 20px;
+    }
+}
+
+/* Для устройств с экранами до 480px */
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 1.5em;
+    }
+
+    .content p {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+}
